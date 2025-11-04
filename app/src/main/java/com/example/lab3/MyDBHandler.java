@@ -27,6 +27,16 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 + COLUMN_PRODUCT_NAME + " TEXT, "
                 + COLUMN_PRODUCT_PRICE + " DOUBLE" + ")";
         db.execSQL(create_table_cmd);
+
+        ContentValues values1 = new ContentValues();
+        values1.put(COLUMN_PRODUCT_NAME, "Product_1");
+        values1.put(COLUMN_PRODUCT_PRICE, 10.00);
+        db.insert(TABLE_NAME, null, values1);
+
+        ContentValues values2 = new ContentValues();
+        values2.put(COLUMN_PRODUCT_NAME, "Product_2");
+        values2.put(COLUMN_PRODUCT_PRICE, 20.00);
+        db.insert(TABLE_NAME, null, values2);
     }
 
     @Override
