@@ -14,7 +14,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     private static final String COLUMN_PRODUCT_NAME = "name";
     private static final String COLUMN_PRODUCT_PRICE = "price";
     private static final String DATABASE_NAME = "products.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2; // Incremented version to trigger onUpgrade
 
     public MyDBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -27,6 +27,17 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 + COLUMN_PRODUCT_NAME + " TEXT, "
                 + COLUMN_PRODUCT_PRICE + " DOUBLE" + ")";
         db.execSQL(create_table_cmd);
+
+        // Add initial products
+        addInitialProduct(db, "Laptop", 1499.99);
+        addInitialProduct(db, "Wireless Mouse", 49.99);
+    }
+
+    private void addInitialProduct(SQLiteDatabase db, String name, double price) {
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PRODUCT_NAME, name);
+        values.put(COLUMN_PRODUCT_PRICE, price);
+        db.insert(TABLE_NAME, null, values);
     }
 
     @Override
