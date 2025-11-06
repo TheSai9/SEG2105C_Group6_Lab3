@@ -1,6 +1,6 @@
 # Lab 3: Android Product Manager with SQLite
 
-This is an Android application developed for SEG2105 (Introduction to Software Engineering) at the University of Ottawa. The app serves as a simple product management system that uses a local SQLite database to store and manage product information.
+This is an Android application developed for SEG2105 Lab 3. The app serves as a simple product management system that uses a local SQLite database to store and manage product information.
 
 ## Features
 
@@ -28,7 +28,8 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-*   Android Studio
+*   Java JDK 11 or newer
+*   Android Studio with Android SDK installed
 *   An Android Emulator or a physical Android device
 
 ### Installation
@@ -49,3 +50,5 @@ This project fulfills the requirements for Lab 3, including a video demonstratio
 - Finding an item by price only.
 - Finding an item by both name and price.
 - Deleting an existing item.
+
+### Demo Video
