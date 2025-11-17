@@ -59,6 +59,11 @@ Two main test cases have been implemented in `MyDBHandlerTest.java`:
 3.  Right-click on the `MyDBHandlerTest` class and select **Run 'MyDBHandlerTest'**.
 4.  The test results will be displayed in the run terminal. All tests should pass.
 
+### Testing Demo Video
+https://github.com/user-attachments/assets/ee47f674-f34d-4555-905a-4ac5fefec134
+
+
+
 ## Deliverables
 
 This project fulfills the requirements for Lab 3 and the testing lab, including a video demonstration of the following actions:
